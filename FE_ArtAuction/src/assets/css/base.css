@@ -1,0 +1,472 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  /* Custom colors for ArtAuction project */
+  --aa-success: #044A42;
+  --aa-success-hover: #033a35;
+  --aa-success-light: rgba(4, 74, 66, 0.1);
+
+  /* Màu xanh sáng hơn */
+  --aa-success-bright: #0d6b5f;
+  --aa-success-bright-hover: #0a5a50;
+  --aa-success-bright-light: rgba(13, 107, 95, 0.1);
+
+  /* Màu phụ - xanh nhạt */
+  --aa-accent: #cddbd9;
+  --aa-accent-hover: #b8d0cd;
+  --aa-accent-light: rgba(205, 219, 217, 0.1);
+  --aa-accent-dark: #a8c4c0;
+
+  /* Màu phụ 2 - xanh mint */
+  --aa-accent2: #d1fae5;
+  --aa-accent2-hover: #a7f3d0;
+  --aa-accent2-light: rgba(209, 250, 229, 0.1);
+  --aa-accent2-dark: #6ee7b7;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+/* Couleur principale du footer */
+:root {
+  --footer-primary-color: #044A42;
+  --footer-secondary-color: #066B5F;
+  --footer-accent-color: #088A7D;
+  --footer-text-color: #ffffff;
+  --footer-text-muted: #B8D4D0;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes for accent color */
+.bg-accent {
+  background-color: var(--aa-accent) !important;
+}
+
+.bg-accent-hover:hover {
+  background-color: var(--aa-accent-hover) !important;
+}
+
+.bg-accent-light {
+  background-color: var(--aa-accent-light) !important;
+}
+
+.bg-accent-dark {
+  background-color: var(--aa-accent-dark) !important;
+}
+
+.text-accent {
+  color: var(--aa-accent) !important;
+}
+
+.text-accent-hover:hover {
+  color: var(--aa-accent-hover) !important;
+}
+
+.border-accent {
+  border-color: var(--aa-accent) !important;
+}
+
+.border-accent-hover:hover {
+  border-color: var(--aa-accent-hover) !important;
+}
+
+/* Button accent styles */
+.btn-accent {
+  background-color: var(--aa-accent) !important;
+  border-color: var(--aa-accent) !important;
+  color: #333 !important;
+  transition: all 0.2s ease;
+}
+
+.btn-accent:hover {
+  background-color: var(--aa-accent-hover) !important;
+  border-color: var(--aa-accent-hover) !important;
+  color: #333 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(205, 219, 217, 0.3);
+}
+
+.btn-accent:focus {
+  background-color: var(--aa-accent-hover) !important;
+  border-color: var(--aa-accent-hover) !important;
+  color: #333 !important;
+  box-shadow: 0 0 0 0.2rem rgba(205, 219, 217, 0.5);
+}
+
+.btn-accent:active {
+  background-color: var(--aa-accent-dark) !important;
+  border-color: var(--aa-accent-dark) !important;
+  color: #333 !important;
+  transform: translateY(0);
+}
+
+/* Utility classes for accent2 color */
+.bg-accent2 {
+  background-color: var(--aa-accent2) !important;
+}
+
+.bg-accent2-hover:hover {
+  background-color: var(--aa-accent2-hover) !important;
+}
+
+.bg-accent2-light {
+  background-color: var(--aa-accent2-light) !important;
+}
+
+.bg-accent2-dark {
+  background-color: var(--aa-accent2-dark) !important;
+}
+
+.text-accent2 {
+  color: var(--aa-accent2) !important;
+}
+
+.text-accent2-hover:hover {
+  color: var(--aa-accent2-hover) !important;
+}
+
+.border-accent2 {
+  border-color: var(--aa-accent2) !important;
+}
+
+.border-accent2-hover:hover {
+  border-color: var(--aa-accent2-hover) !important;
+}
+
+/* Button accent2 styles */
+.btn-accent2 {
+  background-color: var(--aa-accent2) !important;
+  border-color: var(--aa-accent2) !important;
+  color: #333 !important;
+  transition: all 0.2s ease;
+}
+
+.btn-accent2:hover {
+  background-color: var(--aa-accent2-hover) !important;
+  border-color: var(--aa-accent2-hover) !important;
+  color: #333 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(209, 250, 229, 0.3);
+}
+
+.btn-accent2:focus {
+  background-color: var(--aa-accent2-hover) !important;
+  border-color: var(--aa-accent2-hover) !important;
+  color: #333 !important;
+  box-shadow: 0 0 0 0.2rem rgba(209, 250, 229, 0.5);
+}
+
+.btn-accent2:active {
+  background-color: var(--aa-accent2-dark) !important;
+  border-color: var(--aa-accent2-dark) !important;
+  color: #333 !important;
+  transform: translateY(0);
+}
+
+/* Alert accent2 styles */
+.alert-accent2 {
+  padding: 10px 20px !important;
+  background-color: var(--aa-accent2) !important;
+  border-color: var(--aa-accent2-dark) !important;
+  color: #333 !important;
+  border-left: 4px solid var(--aa-accent2-dark) !important;
+}
+
+.alert-accent2 .alert-link {
+  color: var(--aa-accent2-dark) !important;
+  text-decoration: underline;
+}
+
+.alert-accent2 .alert-link:hover {
+  color: #059669 !important;
+}
+
+/* Extra small size utility */
+.xs {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.75rem !important;
+  line-height: 1.2 !important;
+  border-radius: 0.25rem !important;
+}
+
+/* Responsive flexbox utilities for xs breakpoint (only for screens smaller than sm) */
+@media (max-width: 575.98px) {
+  .justify-content-xs-start {
+    justify-content: flex-start !important;
+  }
+
+  .justify-content-xs-end {
+    justify-content: flex-end !important;
+  }
+
+  .justify-content-xs-center {
+    justify-content: center !important;
+  }
+
+  .justify-content-xs-between {
+    justify-content: space-between !important;
+  }
+
+  .justify-content-xs-around {
+    justify-content: space-around !important;
+  }
+
+  .justify-content-xs-evenly {
+    justify-content: space-evenly !important;
+  }
+
+  .align-items-xs-start {
+    align-items: flex-start !important;
+  }
+
+  .align-items-xs-end {
+    align-items: flex-end !important;
+  }
+
+  .align-items-xs-center {
+    align-items: center !important;
+  }
+
+  .align-items-xs-baseline {
+    align-items: baseline !important;
+  }
+
+  .align-items-xs-stretch {
+    align-items: stretch !important;
+  }
+
+  .d-xs-flex {
+    display: flex !important;
+  }
+
+  .d-xs-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-xs-none {
+    display: none !important;
+  }
+
+  .flex-xs-row {
+    flex-direction: row !important;
+  }
+
+  .flex-xs-column {
+    flex-direction: column !important;
+  }
+
+  .flex-xs-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .flex-xs-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  /* Margin utilities for xs */
+  .m-xs-0 { margin: 0 !important; }
+  .m-xs-1 { margin: 0.25rem !important; }
+  .m-xs-2 { margin: 0.5rem !important; }
+  .m-xs-3 { margin: 1rem !important; }
+  .m-xs-4 { margin: 1.5rem !important; }
+  .m-xs-5 { margin: 3rem !important; }
+  .m-xs-auto { margin: auto !important; }
+
+  .mt-xs-0 { margin-top: 0 !important; }
+  .mt-xs-1 { margin-top: 0.25rem !important; }
+  .mt-xs-2 { margin-top: 0.5rem !important; }
+  .mt-xs-3 { margin-top: 1rem !important; }
+  .mt-xs-4 { margin-top: 1.5rem !important; }
+  .mt-xs-5 { margin-top: 3rem !important; }
+  .mt-xs-auto { margin-top: auto !important; }
+
+  .mr-xs-0 { margin-right: 0 !important; }
+  .mr-xs-1 { margin-right: 0.25rem !important; }
+  .mr-xs-2 { margin-right: 0.5rem !important; }
+  .mr-xs-3 { margin-right: 1rem !important; }
+  .mr-xs-4 { margin-right: 1.5rem !important; }
+  .mr-xs-5 { margin-right: 3rem !important; }
+  .mr-xs-auto { margin-right: auto !important; }
+
+  .mb-xs-0 { margin-bottom: 0 !important; }
+  .mb-xs-1 { margin-bottom: 0.25rem !important; }
+  .mb-xs-2 { margin-bottom: 0.5rem !important; }
+  .mb-xs-3 { margin-bottom: 1rem !important; }
+  .mb-xs-4 { margin-bottom: 1.5rem !important; }
+  .mb-xs-5 { margin-bottom: 3rem !important; }
+  .mb-xs-auto { margin-bottom: auto !important; }
+
+  .ml-xs-0 { margin-left: 0 !important; }
+  .ml-xs-1 { margin-left: 0.25rem !important; }
+  .ml-xs-2 { margin-left: 0.5rem !important; }
+  .ml-xs-3 { margin-left: 1rem !important; }
+  .ml-xs-4 { margin-left: 1.5rem !important; }
+  .ml-xs-5 { margin-left: 3rem !important; }
+  .ml-xs-auto { margin-left: auto !important; }
+
+  .mx-xs-0 { margin-left: 0 !important; margin-right: 0 !important; }
+  .mx-xs-1 { margin-left: 0.25rem !important; margin-right: 0.25rem !important; }
+  .mx-xs-2 { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
+  .mx-xs-3 { margin-left: 1rem !important; margin-right: 1rem !important; }
+  .mx-xs-4 { margin-left: 1.5rem !important; margin-right: 1.5rem !important; }
+  .mx-xs-5 { margin-left: 3rem !important; margin-right: 3rem !important; }
+  .mx-xs-auto { margin-left: auto !important; margin-right: auto !important; }
+
+  .my-xs-0 { margin-top: 0 !important; margin-bottom: 0 !important; }
+  .my-xs-1 { margin-top: 0.25rem !important; margin-bottom: 0.25rem !important; }
+  .my-xs-2 { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+  .my-xs-3 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+  .my-xs-4 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+  .my-xs-5 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+  .my-xs-auto { margin-top: auto !important; margin-bottom: auto !important; }
+
+  /* Padding utilities for xs */
+  .p-xs-0 { padding: 0 !important; }
+  .p-xs-1 { padding: 0.25rem !important; }
+  .p-xs-2 { padding: 0.5rem !important; }
+  .p-xs-3 { padding: 1rem !important; }
+  .p-xs-4 { padding: 1.5rem !important; }
+  .p-xs-5 { padding: 3rem !important; }
+
+  .pt-xs-0 { padding-top: 0 !important; }
+  .pt-xs-1 { padding-top: 0.25rem !important; }
+  .pt-xs-2 { padding-top: 0.5rem !important; }
+  .pt-xs-3 { padding-top: 1rem !important; }
+  .pt-xs-4 { padding-top: 1.5rem !important; }
+  .pt-xs-5 { padding-top: 3rem !important; }
+
+  .pr-xs-0 { padding-right: 0 !important; }
+  .pr-xs-1 { padding-right: 0.25rem !important; }
+  .pr-xs-2 { padding-right: 0.5rem !important; }
+  .pr-xs-3 { padding-right: 1rem !important; }
+  .pr-xs-4 { padding-right: 1.5rem !important; }
+  .pr-xs-5 { padding-right: 3rem !important; }
+
+  .pb-xs-0 { padding-bottom: 0 !important; }
+  .pb-xs-1 { padding-bottom: 0.25rem !important; }
+  .pb-xs-2 { padding-bottom: 0.5rem !important; }
+  .pb-xs-3 { padding-bottom: 1rem !important; }
+  .pb-xs-4 { padding-bottom: 1.5rem !important; }
+  .pb-xs-5 { padding-bottom: 3rem !important; }
+
+  .pl-xs-0 { padding-left: 0 !important; }
+  .pl-xs-1 { padding-left: 0.25rem !important; }
+  .pl-xs-2 { padding-left: 0.5rem !important; }
+  .pl-xs-3 { padding-left: 1rem !important; }
+  .pl-xs-4 { padding-left: 1.5rem !important; }
+  .pl-xs-5 { padding-left: 3rem !important; }
+
+  .px-xs-0 { padding-left: 0 !important; padding-right: 0 !important; }
+  .px-xs-1 { padding-left: 0.25rem !important; padding-right: 0.25rem !important; }
+  .px-xs-2 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+  .px-xs-3 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .px-xs-4 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  .px-xs-5 { padding-left: 3rem !important; padding-right: 3rem !important; }
+
+  .py-xs-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .py-xs-1 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; }
+  .py-xs-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+  .py-xs-3 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+  .py-xs-4 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  .py-xs-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+
+  /* Grid column utilities for xs */
+  .col-xs-1 { flex: 0 0 8.333333% !important; max-width: 8.333333% !important; }
+  .col-xs-2 { flex: 0 0 16.666667% !important; max-width: 16.666667% !important; }
+  .col-xs-3 { flex: 0 0 25% !important; max-width: 25% !important; }
+  .col-xs-4 { flex: 0 0 33.333333% !important; max-width: 33.333333% !important; }
+  .col-xs-5 { flex: 0 0 41.666667% !important; max-width: 41.666667% !important; }
+  .col-xs-6 { flex: 0 0 50% !important; max-width: 50% !important; }
+  .col-xs-7 { flex: 0 0 58.333333% !important; max-width: 58.333333% !important; }
+  .col-xs-8 { flex: 0 0 66.666667% !important; max-width: 66.666667% !important; }
+  .col-xs-9 { flex: 0 0 75% !important; max-width: 75% !important; }
+  .col-xs-10 { flex: 0 0 83.333333% !important; max-width: 83.333333% !important; }
+  .col-xs-11 { flex: 0 0 91.666667% !important; max-width: 91.666667% !important; }
+  .col-xs-12 { flex: 0 0 100% !important; max-width: 100% !important; }
+
+  .col-xs-auto { flex: 0 0 auto !important; width: auto !important; max-width: none !important; }
+}
+
+
+
+

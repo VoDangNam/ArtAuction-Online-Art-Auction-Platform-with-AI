@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Art Auction System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .content {
+            color: #333;
+        }
+
+        .intro {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .intro p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            margin-top: 0;
+        }
+
+        .section h3 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+
+        .section ul, .section ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+
+        .section strong {
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+
+        .acceptance-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .acceptance-section h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .acceptance-section p {
+            margin-bottom: 15px;
+        }
+
+        .checkbox-container {
+            margin: 20px 0;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .checkbox-container label {
+            font-size: 14px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .section h2 {
+                font-size: 16px;
+            }
+
+            .section h3 {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Terms of Service</h1>
+            <div class="last-updated">
+                Last updated: <span th:text="${#dates.format(#dates.createNow(), 'dd/MM/yyyy')}">December 19, 2024</span>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Introduction -->
+            <div class="intro">
+                <p>
+                    Hello and thank you for using our services. These terms describe your rights and obligations when using our art auction platform.
+                </p>
+                <p>
+                    By accessing or using our services, you agree to comply with these terms. If you do not agree with any part of these terms, you are not permitted to use our services.
+                </p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>
+                    By registering an account, logging in, or using any of our services, you acknowledge and agree that:
+                </p>
+                <ul>
+                    <li>You have read, understood, and agree to comply with these terms and all related policies.</li>
+                    <li>You have the legal capacity to enter into a binding contract and comply with these terms.</li>
+                    <li>You will provide accurate, complete, and updated information when registering an account.</li>
+                    <li>You are responsible for all activities that occur on your account.</li>
+                    <li>You will not use the service for any illegal purposes.</li>
+                </ul>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section">
+                <h2>2. Definitions</h2>
+                <p>In this document, the following terms are understood as follows:</p>
+                <ul>
+                    <li><strong>"Service"</strong> refers to the online art auction platform we provide, including the website, mobile application, and related services.</li>
+                    <li><strong>"User"</strong> or <strong>"You"</strong> refers to any individual or organization that accesses or uses our services.</li>
+                    <li><strong>"Seller"</strong> refers to users who upload and sell artwork on the platform.</li>
+                    <li><strong>"Buyer"</strong> refers to users who participate in auctions and purchase artwork.</li>
+                    <li><strong>"Artwork"</strong> refers to products posted for auction on the platform.</li>
+                    <li><strong>"Auction Session"</strong> refers to the time period during which the auction process takes place for a specific artwork.</li>
+                    <li><strong>"We"</strong>, <strong>"Company"</strong>, or <strong>"Platform"</strong> refers to the company operating this service.</li>
+                </ul>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section">
+                <h2>3. Account Registration</h2>
+                
+                <h3>3.1. Registration Requirements</h3>
+                <p>
+                    To use certain features of the service, you need to register an account. When registering, you must:
+                </p>
+                <ul>
+                    <li>Be 18 years of age or older, or have the consent of a legal guardian if you are under 18.</li>
+                    <li>Provide accurate, complete, and updated personal information.</li>
+                    <li>Create a strong password and secure your login information.</li>
+                    <li>Maintain and update your account information to ensure accuracy.</li>
+                </ul>
+
+                <h3>3.2. Identity Verification</h3>
+                <p>
+                    To participate in auctions or sell artwork, you may be required to verify your identity through a KYC (Know Your Customer) process, including providing photos of your ID card/CCCD and a selfie to verify your identity.
+                </p>
+
+                <h3>3.3. Account Security</h3>
+                <p>
+                    You are responsible for maintaining the security of your account and password. You agree to:
+                </p>
+                <ul>
+                    <li>Not share your login information with anyone.</li>
+                    <li>Notify us immediately if you discover any unauthorized activity on your account.</li>
+                    <li>Be responsible for all activities that occur on your account.</li>
+                </ul>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section">
+                <h2>4. Use of Service</h2>
+                
+                <h3>4.1. Usage Rights</h3>
+                <p>
+                    We grant you a non-exclusive, non-transferable, and revocable right to access and use the service in accordance with these terms.
+                </p>
+
+                <h3>4.2. Usage Restrictions</h3>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use the service for any illegal or unlawful purposes.</li>
+                    <li>Violate any legal regulations when using the service.</li>
+                    <li>Engage in fraud, price manipulation, or interfere with system operations.</li>
+                    <li>Use robots, spiders, or other automated tools to access the service without our written permission.</li>
+                    <li>Upload, transmit, or share any content that infringes intellectual property rights, privacy rights, or other rights of others.</li>
+                    <li>Upload false, fraudulent, or misleading content.</li>
+                    <li>Collect or store personal information of other users without their consent.</li>
+                </ul>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="section">
+                <h2>5. Auction Rules</h2>
+                
+                <h3>5.1. Participation in Auctions</h3>
+                <p>
+                    When participating in auctions, you agree to:
+                </p>
+                <ul>
+                    <li>Only place bids if you intend and are able to pay if you win the auction.</li>
+                    <li>Your bid must be higher than the current price and comply with the minimum bid increment as specified.</li>
+                    <li>Bids cannot be withdrawn after being placed.</li>
+                    <li>Make full payment within the specified time if you win the auction.</li>
+                </ul>
+
+                <h3>5.2. Registration Fees and Deposits</h3>
+                <p>
+                    Some auction sessions may require you to pay a registration fee or deposit before participating. These fees will be clearly specified in the information for each auction session.
+                </p>
+
+                <h3>5.3. Auction Results</h3>
+                <p>
+                    The highest bidder when the auction session ends becomes the buyer. The system will automatically confirm and notify the buyer and seller. Auction results are final and binding.
+                </p>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section">
+                <h2>6. Rules for Sellers</h2>
+                
+                <h3>6.1. Uploading Artwork</h3>
+                <p>
+                    When uploading artwork for sale, you commit to:
+                </p>
+                <ul>
+                    <li>You have legal ownership or the right to sell the artwork.</li>
+                    <li>The artwork is authentic, not counterfeit, imitation, or copyright-infringing.</li>
+                    <li>Provide accurate and complete descriptions of the artwork, including condition, origin, certification (if any).</li>
+                    <li>Upload high-quality images that accurately represent the actual artwork.</li>
+                    <li>Not upload artwork that violates laws or platform regulations.</li>
+                </ul>
+
+                <h3>6.2. Service Fees</h3>
+                <p>
+                    Sellers may be subject to service fees and commissions as regulated for each auction session. These fees will be deducted from the sale proceeds after the transaction is completed and will be clearly notified before you upload the artwork.
+                </p>
+
+                <h3>6.3. Shipping</h3>
+                <p>
+                    After a successful auction, the seller is responsible for packaging and shipping as described within the committed timeframe. Shipping costs will be agreed upon between the buyer and seller or according to the regulations of each auction session.
+                </p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section">
+                <h2>7. Payment</h2>
+                
+                <h3>7.1. Payment Methods</h3>
+                <p>
+                    We support payment methods listed on the platform. You agree to use legal payment methods and provide accurate payment information.
+                </p>
+
+                <h3>7.2. Payment Deadline</h3>
+                <p>
+                    Buyers must complete payment within the specified time after a successful auction. The payment deadline will be clearly stated in the auction session information. If payment is not made on time, the transaction may be cancelled and the buyer may be subject to processing measures as regulated.
+                </p>
+
+                <h3>7.3. Refunds</h3>
+                <p>
+                    Refund policies will be applied on a case-by-case basis and clearly notified during the transaction process. We reserve the right to refuse refunds if service terms are violated or in other cases as regulated by law.
+                </p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section">
+                <h2>8. Warranty and Returns</h2>
+                
+                <h3>8.1. Product Inspection</h3>
+                <p>
+                    Buyers have the right to inspect the artwork within the specified time from the date of receipt. The inspection period will be notified in the transaction information.
+                </p>
+
+                <h3>8.2. Returns</h3>
+                <p>
+                    Return requests must be submitted within the specified time from the date of receipt, accompanied by evidence proving that the artwork does not match the description or has issues. We will review and handle each specific case according to regulations.
+                </p>
+
+                <h3>8.3. Warranty</h3>
+                <p>
+                    Warranty policies will be determined and clearly published by the seller in the artwork description. We are not responsible for warranty issues beyond the scope agreed between the buyer and seller.
+                </p>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section">
+                <h2>9. Intellectual Property Rights</h2>
+                <p>
+                    All content on the service, including but not limited to text, graphics, logos, symbols, images, software, and other materials, is our property or licensed to us and is protected by copyright and other intellectual property laws.
+                </p>
+                <p>
+                    You may not copy, modify, distribute, sell, or rent any part of the service without our written permission.
+                </p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="section">
+                <h2>10. Disclaimer</h2>
+                <p>
+                    The service is provided "as is" and "as available". We do not guarantee that the service will be uninterrupted, error-free, or completely secure. We are not responsible for:
+                </p>
+                <ul>
+                    <li>The quality, authenticity, or legality of artwork provided by sellers.</li>
+                    <li>Damages arising from buyers or sellers not complying with these terms.</li>
+                    <li>Technical failures, system errors, or service interruptions beyond our reasonable control.</li>
+                    <li>Fraudulent, deceptive, or violating behavior by other users.</li>
+                    <li>Indirect, incidental, special, or consequential damages arising from the use or inability to use the service.</li>
+                </ul>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="section">
+                <h2>11. Limitation of Liability</h2>
+                <p>
+                    To the maximum extent permitted by law, our total liability to you for any claims related to the service will not exceed the amount you have paid to us in the 12 months prior to the claim arising.
+                </p>
+            </div>
+
+            <!-- Section 12 -->
+            <div class="section">
+                <h2>12. Indemnification</h2>
+                <p>
+                    You agree to indemnify, defend, and hold harmless us, our affiliates, employees, agents, and partners from any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorney fees) arising from or related to:
+                </p>
+                <ul>
+                    <li>Your use of the service.</li>
+                    <li>Your violation of these terms.</li>
+                    <li>Your violation of any rights of third parties.</li>
+                    <li>Content you upload or transmit through the service.</li>
+                </ul>
+            </div>
+
+            <!-- Section 13 -->
+            <div class="section">
+                <h2>13. Termination</h2>
+                <p>
+                    We have the right to terminate or suspend your access to the service immediately, without prior notice, for any reason, including but not limited to violation of these terms.
+                </p>
+                <p>
+                    Upon termination, your right to use the service will immediately cease and we may delete your account and content. Terms regarding disclaimers, limitation of liability, and indemnification will continue to be effective after termination.
+                </p>
+            </div>
+
+            <!-- Section 14 -->
+            <div class="section">
+                <h2>14. Applicable Law and Dispute Resolution</h2>
+                
+                <h3>14.1. Applicable Law</h3>
+                <p>
+                    These terms are governed and interpreted according to the laws of the Socialist Republic of Vietnam, without regard to conflict of law provisions.
+                </p>
+
+                <h3>14.2. Dispute Resolution</h3>
+                <p>
+                    All disputes arising from or related to these terms will be resolved through negotiation. If negotiation fails, disputes will be resolved at a competent court in Vietnam.
+                </p>
+            </div>
+
+            <!-- Section 15 -->
+            <div class="section">
+                <h2>15. Changes to Terms</h2>
+                <p>
+                    We have the right to update, change, or modify these terms at any time. Significant changes will be notified to you via email or platform notifications. Continued use of the service after changes take effect is considered your acceptance of the new terms.
+                </p>
+                <p>
+                    If you do not agree with the changes, you may discontinue using the service. The update date is recorded at the beginning of this document.
+                </p>
+            </div>
+
+            <!-- Section 16 -->
+            <div class="section">
+                <h2>16. Other Provisions</h2>
+                
+                <h3>16.1. Independence of Terms</h3>
+                <p>
+                    If any term in this document is deemed invalid or unenforceable, the remaining terms will continue to be fully effective.
+                </p>
+
+                <h3>16.2. Entire Agreement</h3>
+                <p>
+                    These terms, together with the Privacy Policy and other policies referenced in this document, constitute the entire agreement between you and us regarding the use of the service.
+                </p>
+
+                <h3>16.3. No Waiver</h3>
+                <p>
+                    Our failure or delay in enforcing any right under these terms will not be considered a waiver of that right.
+                </p>
+
+                <h3>16.4. Contact</h3>
+                <p>
+                    If you have any questions about these terms, please contact us via email at support@artauction.com or through other contact channels provided on the platform.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

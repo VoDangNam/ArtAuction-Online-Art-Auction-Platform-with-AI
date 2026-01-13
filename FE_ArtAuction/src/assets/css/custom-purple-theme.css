@@ -1,0 +1,461 @@
+/* Custom Purple Theme - Override All Primary Colors - ONLY for Admin Layout */
+
+/* Force override Bootstrap primary colors - ONLY for admin layout */
+.wrapper.admin-theme,
+.wrapper.admin-theme * {
+  --bs-primary: #7c3aed !important;
+  --bs-primary-rgb: 124, 58, 237 !important;
+}
+
+.wrapper.admin-theme {
+  /* Thay đổi màu primary sang #7c3aed (Purple 700) - ONLY for admin */
+  --bs-primary: #7c3aed !important; /* Purple 700 */
+   --bs-primary-rgb: 124, 58, 237 !important; /*RGB của màu tím */
+
+  /* Template-specific colors for light backgrounds and dark variants */
+  --iq-light-primary: rgba(124, 58, 237, 0.1); /* Light purple background */
+  --iq-primary-dark: #5b21b6; /* Darker purple for dark backgrounds */
+  --iq-primary-shadow-1: rgba(124, 58, 237, 0.3); /* Light purple shadow */
+  --iq-primary-shadow-2: rgba(124, 58, 237, 0.5); /* Medium purple shadow */
+
+  /* Light border color - missing definition */
+  --iq-light-border: #e9ecef; /* Light gray border color */
+
+  /* Template color variables - missing definitions */
+  --iq-white: #ffffff;
+  --iq-black: #000000;
+  --iq-body-bg: #f9f2ffff;
+  /* --iq-body-text: #6c757d; */
+  --iq-body-text: #000000;
+  --iq-card-bg: #ffffff;
+  --iq-color-light: #f8f9fa;
+  --iq-icon-color: #6c757d;
+  --iq-light: #f8f9fa;
+  --iq-dark: #343a40;
+  --iq-dark-border: #dee2e6;
+  --iq-border-light: #e9ecef;
+  --iq-secondary: #6c757d;
+  --iq-progress-light: #e9ecef;
+
+  /* Status colors */
+  --iq-success: #28a745;
+  --iq-warning: #ffc107;
+  --iq-danger: #dc3545;
+  --iq-info: #17a2b8;
+
+  /* Light variants */
+  --iq-light-success: rgba(40, 167, 69, 0.1);
+  --iq-light-warning: rgba(255, 193, 7, 0.1);
+  --iq-light-danger: rgba(220, 53, 69, 0.1);
+  --iq-light-info: rgba(23, 162, 184, 0.1);
+
+  /* Card shadow variables */
+  --iq-card-shadow-1: rgba(0, 0, 0, 0.1);
+  --iq-card-shadow-2: rgba(0, 0, 0, 0.05);
+
+  /* Blue light variant - missing definition */
+  --iq-blue-light: var(--iq-light-primary);
+
+  /* Background light color - missing definition */
+  --iq-bg-light-color: var(--iq-light-primary);
+
+  /* Cập nhật màu link để phù hợp với theme mới */
+  --bs-link-color: #7c3aed;
+  --bs-link-hover-color: #6d28d9; /* Màu tím đậm hơn khi hover */
+}
+
+/* Đảm bảo tất cả các component sử dụng màu primary mới - ONLY for admin */
+.wrapper.admin-theme .btn-primary,
+.wrapper.admin-theme button.btn-primary,
+.wrapper.admin-theme input.btn-primary {
+  background-color: #7c3aed !important;
+  border-color: #7c3aed !important;
+  color: #ffffff !important;
+}
+
+.wrapper.admin-theme .btn-primary:hover {
+  background-color: #6d28d9 !important;
+  border-color: #6d28d9 !important;
+}
+
+.wrapper.admin-theme .btn-primary:focus {
+  background-color: #6d28d9 !important;
+  border-color: #6d28d9 !important;
+  box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25) !important;
+}
+
+.wrapper.admin-theme .btn-primary:active {
+  background-color: #5b21b6 !important;
+  border-color: #5b21b6 !important;
+}
+
+.wrapper.admin-theme .btn-outline-primary {
+  color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .btn-outline-primary:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #ffffff !important;
+}
+
+.wrapper.admin-theme .btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25) !important;
+}
+
+.wrapper.admin-theme .btn-outline-primary:active {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .bg-primary-dark {
+  background-color: var(--iq-primary-dark) !important;
+}
+
+.wrapper.admin-theme .border-primary {
+  border-color: var(--bs-primary) !important;
+}
+
+/* Form controls */
+.wrapper.admin-theme .form-control:focus {
+  border-color: #dee2e6 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.wrapper.admin-theme .form-select:focus {
+  border-color: #dee2e6 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.wrapper.admin-theme .form-check-input:checked {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .form-check-input:focus {
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25) !important;
+}
+
+/* Table */
+.wrapper.admin-theme .table-primary {
+  --bs-table-bg: var(--iq-light-primary);
+  --bs-table-striped-bg: rgba(124, 58, 237, 0.05);
+  --bs-table-hover-bg: rgba(124, 58, 237, 0.075);
+}
+
+/* Progress bar */
+.wrapper.admin-theme .progress-bar {
+  background-color: var(--bs-primary) !important;
+}
+
+/* Pagination */
+.wrapper.admin-theme .page-link {
+  color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .page-link:hover {
+  color: var(--iq-primary-dark) !important;
+}
+
+.wrapper.admin-theme .page-item.active .page-link {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+/* Navbar */
+.wrapper.admin-theme .navbar-dark.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+/* Alert */
+.wrapper.admin-theme .alert-primary {
+  color: var(--iq-primary-dark);
+  background-color: var(--iq-light-primary);
+  border-color: rgba(124, 58, 237, 0.2);
+}
+
+/* Badge */
+.wrapper.admin-theme .badge.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+/* List group */
+.wrapper.admin-theme .list-group-item-primary {
+  color: var(--iq-primary-dark);
+  background-color: var(--iq-light-primary);
+}
+
+/* Dropdown */
+.wrapper.admin-theme .dropdown-item.active,
+.wrapper.admin-theme .dropdown-item:active {
+  background-color: var(--bs-primary) !important;
+}
+
+/* Modal */
+.wrapper.admin-theme .modal-header .btn-close {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237c3aed'%3e%3cpath d='m.5 1.5 1.5-1.5L8 6.5 14 0l1.5 1.5L9.5 8l6 6.5-1.5 1.5L8 9.5l-6 6.5-1.5-1.5L6.5 8z'/%3e%3c/svg%3e") center/1em auto no-repeat !important;
+}
+
+/* Links - chỉ áp dụng cho các link cụ thể, không phải tất cả thẻ a */
+.wrapper.admin-theme .btn-link,
+.wrapper.admin-theme .nav-link,
+.wrapper.admin-theme .dropdown-item,
+.wrapper.admin-theme .page-link {
+  color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .btn-link:hover,
+.wrapper.admin-theme .nav-link:hover,
+.wrapper.admin-theme .dropdown-item:hover,
+.wrapper.admin-theme .page-link:hover {
+  color: var(--iq-primary-dark) !important;
+}
+
+/* Menu sidebar - đảm bảo các thẻ a có màu phù hợp */
+.wrapper.admin-theme .iq-sidebar a {
+  color: #6c757d !important; /* Màu xám cho text thông thường */
+  text-decoration: none !important;
+}
+
+.wrapper.admin-theme .iq-sidebar a:hover {
+  color: var(--bs-primary) !important; /* Màu tím khi hover */
+}
+
+.wrapper.admin-theme .iq-sidebar .active a {
+  color: #ffffff !important; /* Màu trắng cho text của item active */
+}
+
+.wrapper.admin-theme .iq-sidebar .active a i {
+  color: #ffffff !important; /* Màu trắng cho icon của item active */
+}
+
+/* Logo và branding trong sidebar */
+.wrapper.admin-theme .iq-sidebar .navbar-brand {
+  color: #212529 !important; /* Màu đen cho logo */
+}
+
+.wrapper.admin-theme .iq-sidebar .navbar-brand:hover,
+.wrapper.admin-theme .iq-sidebar .navbar-brand a:hover,
+.wrapper.admin-theme .iq-sidebar .navbar-brand a:focus {
+  color: #212529 !important; /* Giữ màu đen khi hover */
+  text-decoration: none !important;
+}
+
+/* Input group */
+.wrapper.admin-theme .input-group-text {
+  background-color: var(--iq-light-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+/* Custom purple classes */
+.wrapper.admin-theme .text-purple {
+  color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .bg-purple {
+  background-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .border-purple {
+  border-color: var(--bs-primary) !important;
+}
+
+/* Navigation */
+.wrapper.admin-theme .nav-container.primary-menu .navbar-nav a.nav-link:hover,
+.wrapper.admin-theme .nav-container.primary-menu .navbar-nav a.nav-link:focus,
+.wrapper.admin-theme .nav-container.primary-menu .nav-link.active,
+.wrapper.admin-theme .nav-container.primary-menu .show > .nav-link {
+  color: var(--bs-primary) !important;
+  background-color: var(--iq-light-primary) !important;
+}
+
+/* Admin sidebar submenu background to white when expanded */
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu .iq-submenu {
+  background: #ffffff !important;
+}
+
+/* Sidebar parent item styling when expanded: text + arrow turn white */
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu li > a[aria-expanded="true"] {
+  color: #ffffff !important;
+}
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu li > a[aria-expanded="true"] i,
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu li > a[aria-expanded="true"] .iq-arrow-right {
+  color: #ffffff !important;
+}
+
+/* Submenu item look when expanded: light purple pill on hover/active */
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu .iq-submenu li > a {
+  border-radius: 8px !important;
+  /* margin: 4px 10px !important; */
+  background: transparent !important; /* keep items transparent; UL carries the tint */
+  color: var(--iq-icon-color) !important;
+}
+
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu .iq-submenu li > a:hover {
+  background: transparent !important; /* hover only changes text color */
+  color: var(--bs-primary) !important;
+}
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu .iq-submenu li.active > a,
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu li.active .iq-submenu li > a:hover.active {
+  background: rgba(124, 58, 237, 0.12) !important; /* keep active pill */
+  color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu .iq-submenu li > a:hover i,
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu .iq-submenu li.active > a i {
+  color: var(--bs-primary) !important;
+}
+
+/* Apply light purple background to the whole opened submenu UL */
+.wrapper.admin-theme .iq-sidebar-menu .iq-menu .iq-submenu.collapse.show {
+  background: rgba(124, 58, 237, 0.08) !important;
+  border-radius: 0 0 12px 0 !important; /* connect to header item */
+  /* margin: 0 8px 8px 8px !important; remove gap at the top */
+  padding: 8px 0 !important;
+}
+
+.wrapper.admin-theme .nav-container.primary-menu .dropdown-menu .dropdown-item.active,
+.wrapper.admin-theme .nav-container.primary-menu .dropdown-menu .dropdown-item:active {
+  background-color: var(--bs-primary) !important;
+  color: #ffffff !important;
+}
+
+/* Logo and branding */
+.wrapper.admin-theme .logo-text {
+  color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .toggle-icon {
+  color: var(--bs-primary) !important;
+}
+
+/* Back to top button */
+.wrapper.admin-theme .back-to-top {
+  background-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .back-to-top:hover {
+  background-color: var(--iq-primary-dark) !important;
+}
+
+/* Tabs */
+.wrapper.admin-theme .nav-primary.nav-tabs .nav-link.active {
+  color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) var(--bs-primary) transparent !important;
+}
+
+/* Background variants */
+.wrapper.admin-theme .bg-light-primary {
+  background-color: var(--iq-light-primary) !important;
+}
+
+.wrapper.admin-theme .split-bg-primary {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, var(--iq-primary-dark) 100%) !important;
+}
+
+/* Admin page background color */
+.wrapper.admin-theme .content-page {
+  background-color: #f7f6fd !important;
+}
+
+/* Cards */
+.wrapper.admin-theme .card-purple {
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(124, 58, 237, 0.075) !important;
+}
+
+.wrapper.admin-theme .card-purple-opacity {
+  background-color: var(--iq-light-primary) !important;
+  border-color: rgba(124, 58, 237, 0.2) !important;
+}
+
+/* Gradients */
+.wrapper.admin-theme .bg-gradient {
+  background: linear-gradient(45deg, var(--bs-primary), var(--iq-primary-dark)) !important;
+}
+
+.wrapper.admin-theme .bg-gradient-purple {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, var(--iq-primary-dark) 100%) !important;
+}
+
+.wrapper.admin-theme .bg-gradient-right {
+  background: linear-gradient(to right,
+    var(--bs-primary) 0%,
+    rgba(124, 58, 237, 0.8) 25%,
+    rgba(124, 58, 237, 0.6) 50%,
+    rgba(124, 58, 237, 0.4) 75%,
+    transparent 100%) !important;
+}
+
+.wrapper.admin-theme .bg-gradient-left {
+  background: linear-gradient(to left,
+    var(--bs-primary) 0%,
+    rgba(124, 58, 237, 0.8) 25%,
+    rgba(124, 58, 237, 0.6) 50%,
+    rgba(124, 58, 237, 0.4) 75%,
+    transparent 100%) !important;
+}
+
+/* Card hover effects */
+.wrapper.admin-theme .card-hover {
+  transition: all 0.3s ease;
+}
+
+.wrapper.admin-theme .card-hover:hover {
+  box-shadow: 0 0.5rem 1rem rgba(124, 58, 237, 0.15) !important;
+}
+
+/* Utility classes */
+.wrapper.admin-theme .inset-top-bottom {
+  border-top: 3px solid var(--bs-primary);
+  border-bottom: 3px solid var(--bs-primary);
+}
+
+.wrapper.admin-theme .hr-purple {
+  border-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .filter {
+  filter: hue-rotate(240deg) saturate(1.2) brightness(0.9);
+}
+
+/* Generic selectors with admin theme scope */
+.wrapper.admin-theme [class*="btn-primary"],
+.wrapper.admin-theme [class*="bg-primary"],
+.wrapper.admin-theme [class*="border-primary"] {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme [class*="text-primary"] {
+  color: var(--bs-primary) !important;
+}
+
+/* Final overrides for admin theme */
+.wrapper.admin-theme .bg-primary,
+.wrapper.admin-theme .btn-primary,
+.wrapper.admin-theme .border-primary,
+.wrapper.admin-theme .nav-link.active,
+.wrapper.admin-theme .nav-item.active .nav-link,
+.wrapper.admin-theme .dropdown-item.active,
+.wrapper.admin-theme .page-item.active .page-link {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.wrapper.admin-theme .text-primary {
+  color: var(--bs-primary) !important;
+}

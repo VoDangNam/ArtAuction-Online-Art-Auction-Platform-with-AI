@@ -1,0 +1,1067 @@
+/* ===========================================
+   CSS CHO LOGIN/REGISTER CLIENT
+   =========================================== */
+
+/* Background chính cho trang login/register */
+.container-acc {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-background {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #a8e6cf 25%,
+    #20b2aa 55%,
+    #0a6b5f 65%,
+    #044a42 80%,
+    #022a26 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.login-background .triangle-1,
+.login-background .triangle-2,
+.login-background .triangle-3,
+.login-background .triangle-5,
+.login-background .triangle-6,
+.login-background .triangle-7 {
+  position: absolute;
+  z-index: 1;
+}
+
+.card-acc {
+  z-index: 10;
+}
+
+.bg-gradient-card {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-blur {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+}
+
+.bg-blur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.105);
+  z-index: 9;
+}
+
+.content-blur {
+  position: relative;
+  z-index: 10;
+}
+
+.content-blur p {
+  color: #080303;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.logoLogin {
+  width: 70px;
+}
+
+/* Đảm bảo backdrop-filter hoạt động */
+.bg-gradient-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.group-input {
+  position: relative;
+  border-bottom: 2px solid var(--aa-success);
+  margin-bottom: 20px;
+}
+
+.group-input label {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.group-input input {
+  width: 100%;
+  color: var(--aa-success);
+  background: transparent;
+  border: none !important;
+  outline: none !important;
+  padding: 10px 0;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.group-input input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent !important;
+}
+
+.group-input input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Loại bỏ viền Bootstrap */
+.group-input .form-control:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.group-input .form-control {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Loại bỏ màu nền autofill */
+.group-input input:-webkit-autofill,
+.group-input input:-webkit-autofill:hover,
+.group-input input:-webkit-autofill:focus,
+.group-input input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: var(--aa-success) !important;
+  background-color: transparent !important;
+  background-clip: content-box !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* Loại bỏ màu nền cho tất cả trạng thái */
+.group-input input,
+.group-input input:focus,
+.group-input input:active,
+.group-input input:hover {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Xử lý autofill cho Firefox */
+.group-input input:-moz-autofill {
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+}
+
+/* Xử lý cho tất cả browser */
+.group-input input[data-autocompleted] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.group-input input:focus {
+  background-color: transparent !important;
+}
+
+.group-input input:focus + label,
+.group-input input:valid + label,
+/* .group-input input:not(:placeholder-shown) + label, */
+.group-input input:-webkit-autofill + label {
+  top: -15px;
+  left: 0px;
+  font-size: 14px;
+  color: var(--aa-success);
+  background: transparent;
+  transform: translateY(0);
+  /* font-weight: bold; */
+  transition: all 0.3s ease;
+}
+
+.group-input input:not(:focus):not(:valid):placeholder-shown + label {
+  top: 50%;
+  left: 0px;
+  font-size: 16px;
+  color: #777;
+  background: transparent;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.group-input i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 10px 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.group-input i:hover {
+  opacity: 0.7;
+}
+
+/* Google Login Button */
+
+.btn-google:hover {
+  background-color: #f8f9fa;
+  border-color: #dadce0;
+  color: #3c4043;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Remember me & Forgot password styling */
+.form-check-input:checked {
+  background-color: var(--aa-success);
+  border-color: var(--aa-success);
+}
+
+.form-check-input:focus {
+  border-color: var(--aa-success);
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.form-check-label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.text-success.text-decoration-none:hover {
+  text-decoration: underline !important;
+  color: var(--aa-success) !important;
+}
+
+.text-acc {
+  color: var(--aa-success);
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.left {
+  font-size: 18px;
+}
+
+/* ===========================================
+   CSS CHO PROFILE CLIENT
+   =========================================== */
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--aa-success);
+}
+
+.hide-on-small {
+  display: block;
+}
+
+/* @media (max-width: 1200px) and (min-width: 990px) { */
+@media (max-width: 1400px) and (min-width: 990px) {
+  .hide-on-small {
+    display: none !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .hide-on-small {
+    display: block !important;
+  }
+}
+
+/* ===========================================
+   CSS CHO MENU PHỤ - SUBMENU TRANG CLIENT
+   =========================================== */
+
+.submenu-item {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.aa-link {
+  /* border-radius: 7px; */
+
+  /* border-radius: 0 7px 7px 0; */
+  /* border-left: 5px solid var(--vt-c-white); */
+  color: var(--vt-c-black);
+  transition: all 0.2s ease;
+}
+.aa-link:hover {
+  /* background: rgba(4, 74, 66, 0.1); */
+  color: var(--aa-success);
+}
+
+.aa-link.active {
+  border-radius: 0 7px 7px 0;
+  border-left: 5px solid var(--aa-success);
+  background: rgba(4, 74, 66, 0.1);
+  color: var(--aa-success);
+  /* box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.12); */
+}
+
+.aa-link.active i {
+  color: var(--aa-success);
+}
+
+@media (max-width: 991px) {
+  .aa-link.active {
+    border-left: none;
+    border-radius: 7px;
+  }
+}
+
+.submenu-item:hover,
+.submenu-item:focus,
+.submenu-item:active,
+.submenu-item:visited {
+  text-decoration: none !important;
+}
+
+.submenu {
+  position: sticky;
+  /* top: 110px; */
+  z-index: 99;
+  height: fit-content;
+}
+@media (max-width: 575.98px) {
+  .submenu {
+    top: 80px; /* Điều chỉnh cho mobile */
+  }
+}
+
+/* ===========================================
+
+   CSS CHO MANAGEMENT - SUBMENU TRANG CLIENT
+   =========================================== */
+.img-square {
+  width: 100%;
+  aspect-ratio: 3/2; /* height = 2/3 width */
+  object-fit: cover;
+}
+/* .header-sub {
+  position: sticky;
+  top: 110px;
+  z-index: 99;
+  height: fit-content;
+} */
+
+/* ===========================================
+   CSS CHO HISTORY - SUBMENU TRANG CLIENT
+   =========================================== */
+
+.img-auction {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.badge-live-1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #c50000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: inline-flex;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.badge-live-2 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #c89d00;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: inline-flex;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.badge-success1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--aa-success);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.badge-success2 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--aa-success);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+/* ===========================================
+   CSS CHO HOME Client - Home/index.vue
+   =========================================== */
+
+.featured-art-card .artwork-overlay {
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.featured-art-card .artwork-overlay.overlay-bottom {
+  transform: translateY(12px);
+}
+
+.featured-art-card:hover .artwork-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.featured-art-card {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.featured-art-image-wrapper {
+  height: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.featured-art-card:hover .featured-art-image-wrapper {
+  height: 230px;
+}
+
+.featured-art-card .featured-art-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.35s ease;
+}
+
+.featured-art-card:hover .featured-art-image {
+  filter: brightness(0.55) saturate(0.9);
+}
+
+.featured-art-card .artwork-info {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.4s ease;
+}
+
+.featured-art-card:hover .artwork-info {
+  max-height: 140px;
+  opacity: 1;
+  margin-top: 18px;
+}
+
+.bg-success-light-home {
+  background-color: #dff5f3;
+}
+.text-success-light-home {
+  color: #dff5f3;
+}
+#carouselExampleIndicators .carousel-inner,
+#carouselExampleIndicators .carousel-item {
+  min-height: 280px;
+  background-color: #0f584f;
+}
+
+#carouselExampleIndicators .carousel-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.auction-card {
+  border-radius: 18px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transform-origin: center;
+  transition: transform 0.45s cubic-bezier(0.19, 1, 0.22, 1),
+    box-shadow 0.45s cubic-bezier(0.19, 1, 0.22, 1), background 0.3s ease;
+}
+
+.auction-card:hover {
+  transform: translateY(-14px) scale(1.03);
+  box-shadow: 0 20px 35px rgba(4, 74, 66, 0.35) !important;
+}
+
+.auction-card .img-auction {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.auction-card:hover .img-auction {
+  transform: scale(1.04);
+}
+
+.auction-card .badge {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.auction-card .card-body {
+  transition: box-shadow 0.3s ease;
+}
+/* .tag-btn {
+  width: 120px;
+  height: 36px;
+  background-color: white;
+  border: 1px solid var(--aa-success);
+  text-align: center;
+  font-size: 13px;
+} */
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
+}
+
+.thumb {
+  object-fit: cover !important;
+  max-width: 100% !important;
+  height: 150px !important;
+}
+
+.desc {
+  font-size: 13px;
+  color: #555;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 2 0.25rem rgba(4, 72, 64, 1) !important;
+}
+.circle-8-about {
+  width: 8px;
+  height: 8px;
+}
+
+/* ===========================================
+   CSS CHO Home KHACH HANG - Home/index.vue
+   =========================================== */
+
+/* .card_right .card-intro {
+  width: 18rem;
+  width: 150px !important;
+  height: 170px !important;
+}
+.text {
+  width: 550px;
+  color: #044a42;
+}
+.w-400 {
+  width: 400px;
+}
+.h-350 {
+  height: 350px;
+}
+.picture {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.btn {
+  width: 150px !important;
+  height: 30px !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  border-radius: 5px !important;
+  border: 1px solid #044a42 !important;
+}
+
+.btn-success {
+  background-color: #044a42 !important;
+  color: white !important;
+}
+
+.picture {
+  gap: 20px;
+  margin-top: 30px;
+}
+.text-success-custom {
+  color: #044a42;
+}
+.section2 {
+  height: 150px;
+  background-color: #044a42;
+  margin-top: 50px;
+  box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.25), inset 0px -10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.p-home {
+  color: #044a42;
+}
+.w-100px {
+  width: 100px;
+}
+.h-100px {
+  height: 100px;
+}
+
+.section3 {
+  margin-top: 50px;
+}
+
+.card-intro {
+  max-width: 350px;
+}
+
+.section4 {
+  min-height: 237px;
+  background-color: #044a42;
+  margin-top: 50px;
+  box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.25), inset 0px -10px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ảnh nền ban đầu */
+/* .custom-abs-intro {
+  top: -110px;
+  left: 187px;
+  width: 1000px;
+  height: 1000px;
+  transform: translateX(-39%);
+}
+.w-180 {
+  width: 180px;
+}
+.card-img-top {
+  width: 130px !important;
+  height: 120px !important;
+  margin-bottom: -10px !important;
+}
+
+@media (max-width: 992px) {
+  .picture {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 20px;
+  }
+
+  .section3 .top {
+    flex-direction: column !important;
+    gap: 30px !important;
+    text-align: center;
+  }
+
+  .section3 img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .section4 .text {
+    text-align: center !important;
+    margin: 20px auto 0;
+    max-width: 90%;
+  }
+
+  .section5 .content_section5 {
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .section5 .text_left {
+    height: auto;
+    display: flex;
+  }
+
+  .section5 .card_right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .content_sec,
+  .img,
+  .res-sec3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+@media (max-width: 728px) {
+  .left_section1 {
+    gap: 20px !important;
+    display: flex;
+    margin: auto;
+    text-align: start;
+  }
+  .text {
+    margin: auto;
+    text-align: start;
+  }
+  .top {
+    display: flex;
+    gap: 20px;
+  }
+  .content_sec,
+  .img,
+  .res-sec3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  .res-sec5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .btn {
+    width: 120px !important;
+    font-size: 9px !important;
+  }
+} */
+
+/* Tablet: ảnh nhỏ lại và không che text */
+/* @media (max-width: 992px) {
+  .custom-abs-intro {
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.3;
+  }
+
+  .section4 .text {
+    position: relative;
+    z-index: 2;
+    text-align: center !important;
+    margin: 40px auto;
+    max-width: 90%;
+  }
+} */
+
+/* Mobile: ảnh co hẳn lại hoặc ẩn đi */
+/* @media (max-width: 576px) {
+  .custom-abs-intro {
+    display: none;
+  }
+
+  .section4 .text {
+    margin: 30px auto;
+    padding: 0 15px;
+    text-align: center !important;
+  }
+}  */
+
+/* ===========================================
+   CSS CHO Home - Home/index.vue
+   =========================================== */
+.img-art {
+  height: 150px !important;
+}
+
+/* ===========================================
+   CSS CHO AboutUs - AboutUs/index.vue
+   =========================================== */
+
+.content_aboutus {
+  color: var(--aa-success);
+}
+
+.text-content h2 {
+  color: var(--aa-success);
+}
+
+.text-content p,
+.text-content li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.union-divider {
+  width: 178px;
+  height: 186px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .text-content {
+    text-align: center;
+  }
+
+  .union-divider {
+    width: 120px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-content p,
+  .text-content li {
+    font-size: 13px;
+  }
+
+  .display-6 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .img {
+    display: flex;
+    justify-self: center;
+  }
+  .content_section5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ===========================================
+   CSS CHO INVOICES - Invoices/index.vue
+   =========================================== */
+
+.priceTotal,
+.total {
+  color: var(--aa-success);
+  font-weight: bold;
+  font-size: 16px;
+}
+.card {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
+}
+.pay-status-inv {
+  font-size: 12px;
+}
+
+/* ===========================================
+   CSS CHO NOTIFICATION - components/MenuClient.vue
+   =========================================== */
+
+/* .notification-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+} */
+.notification-icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #044a42;
+}
+/* .create-muiten {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+} */
+/* .muiten {
+  top: -8px;
+  right: 20px;
+} */
+/* .notification-dropdown {
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 2px solid #044a42;
+  min-width: 350px;
+  max-width: 400px;
+  z-index: 1000;
+} */
+
+/* ===========================================
+   CSS CHO INVOICE
+   =========================================== */
+
+.img-invoice {
+  max-height: 150px;
+}
+
+.img-bank {
+  width: 55px;
+}
+
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.step .circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.step .label {
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.connector {
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.connector.left {
+  margin-right: 12px;
+}
+
+.connector.right {
+  margin-left: 12px;
+}
+
+/* States */
+.step.completed .circle {
+  background: var(--aa-success);
+}
+.step.completed .connector.right,
+.step.current .connector.left {
+  background: var(--aa-success);
+}
+
+.step.current .circle {
+  background: var(--aa-success);
+}
+.step.current .connector.right,
+.step.after-current .connector.left {
+  background: var(--aa-success);
+}
+
+.step.upcoming .circle {
+  background: #a9b0b3; /* gray */
+}
+.step.upcoming .connector.right,
+.step.upcoming .connector.left {
+  background: #a9b0b3;
+}
+
+/* ===========================================
+   CSS CHO AUCTIONROOM - CHAT
+   =========================================== */
+.chat-content {
+  position: relative;
+  width: auto;
+  /* height: 520px; */
+}
+
+.chat-content-leftside .chat-left-msg {
+  width: fit-content;
+  padding: 0.8rem;
+  border-radius: 12px;
+  max-width: 480px;
+  text-align: left;
+  border-top-left-radius: 0;
+}
+
+.chat-content-rightside .chat-right-msg {
+  width: fit-content;
+  padding: 0.8rem;
+  border-radius: 12px;
+  float: right;
+  max-width: 480px;
+  text-align: left;
+  border-bottom-right-radius: 0;
+}
+
+.title-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}

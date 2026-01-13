@@ -1,0 +1,4 @@
+epoch_checkpoints
+*.pth
+data/
+venv/

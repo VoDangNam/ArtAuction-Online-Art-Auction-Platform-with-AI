@@ -1,0 +1,521 @@
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+
+  background-color: #F0F9F9;
+  font-family: 'Montserrat', sans-serif;
+
+
+}
+
+#app {
+  width: 100%;
+  margin: 0;
+  /* padding: 2rem; */
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  /* font-size: 16px; */
+}
+
+/* p{
+  font-size: 15px;
+} */
+
+a,
+.green {
+  text-decoration: none;
+  color: var(--aa-success);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+/* @media (hover: hover) {
+  a:hover {
+    background-color: var(--aa-success-light);
+  }
+} */
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  /* Remove grid constraint so wrapper can span full width */
+  #app {
+    display: block;
+    padding: 0;
+  }
+}
+
+/* logo */
+.imgLogo {
+  display: inline-block;
+  height: 40px;
+
+}
+
+.img-avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--aa-success);
+}
+
+.dropdown-menu {
+  min-width: 250px !important;
+  border-radius: 12px !important;
+  padding: 0;
+
+}
+
+.dropdown-item {
+  transition: background-color 0.2s ease;
+  border: none;
+  border-radius: 8px !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--aa-accent) !important;
+}
+
+.dropdown-toggle-no-caret::after {
+  display: none !important;
+}
+
+
+
+.imgLogoFooter {
+  display: inline-block;
+  height: 45px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  background-color: #F0F9F9;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: fit-content;
+}
+
+.page-wrapper {
+  /* flex: 1 1 auto; */
+  width: 100%;
+}
+
+.page-content {
+  width: 100%;
+}
+
+/* ===========================================
+   CSS CHO MENU CLIENT - MenuClient.vue
+   =========================================== */
+
+/* Menu item cơ bản */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0 1rem;
+  font-weight: 700 !important;
+    font-size: 18px !important;
+
+}
+
+.nav-link.active {
+  color: var(--aa-success) !important;
+  font-weight: 700;
+}
+
+/* Dấu gạch dưới cho trang active */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3px;
+  background-color: var(--aa-success);
+  border-radius: 2px;
+  animation: slideInFromCenter 0.3s ease;
+}
+
+@keyframes slideInFromCenter {
+  from {
+    width: 0;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  to {
+    width: 100%;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.nav-link:not(.active):hover {
+  color: var(--aa-success) !important;
+  background-color: transparent !important;
+}
+
+/* Loại bỏ hoàn toàn hover effect cho menu item đang active */
+.nav-link.active:hover {
+  color: var(--aa-success) !important;
+  background-color: transparent !important;
+}
+
+.nav-link.active:hover::after {
+  display: block;
+}
+
+/* Loại bỏ hover effect cho navbar-brand */
+.navbar-brand {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.navbar-brand:hover {
+  color: inherit !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+/* FOOTER STYLES - Couleur principale #044A42 */
+.footer {
+  background: var(--footer-primary-color);
+  color: var(--footer-text-color);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer-section h3 {
+  color: var(--footer-text-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.footer-section h4 {
+  color: var(--footer-text-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.footer-section h5 {
+  color: var(--footer-text-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-logo p {
+  color: var(--footer-text-muted);
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--footer-text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--footer-text-color);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--footer-secondary-color);
+  color: var(--footer-text-color);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--footer-accent-color);
+  transform: translateY(-2px);
+}
+
+/* Newsletter */
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--footer-secondary-color);
+  border-radius: 6px;
+  background: var(--footer-secondary-color);
+  color: var(--footer-text-color);
+  font-size: 0.9rem;
+}
+
+.newsletter-form input::placeholder {
+  color: var(--footer-text-muted);
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--footer-accent-color);
+  background: var(--footer-accent-color);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  /* padding: 2rem 0; */
+  border-top: 1px solid var(--footer-secondary-color);
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  color: var(--footer-text-muted);
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-bottom-links a {
+  color: var(--footer-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--footer-text-color);
+}
+
+.dropdown-notification{
+  height: 50px;
+  width: 50px;
+}
+.dropdown-menu.dropdown-menu-lg {
+  min-width: 350px !important;
+}
+
+/* Ensure any modal (including ZEGOCLOUD confirm) is not hidden or blocked */
+.modal,
+[role="dialog"],
+div[class*="modal"],
+div[class*="Modal"],
+div[class*="dialog"],
+div[class*="Dialog"] {
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+
+.modal-backdrop,
+[class*="backdrop"],
+[class*="Backdrop"],
+div[class*="backdrop"],
+div[class*="Backdrop"] {
+  z-index: 99998 !important;
+  pointer-events: auto !important;
+  background-color: #000 !important;
+}
+
+/* Đảm bảo backdrop fade từ opacity 0 */
+.modal-backdrop.fade,
+[class*="backdrop"].fade,
+[class*="Backdrop"].fade,
+div[class*="backdrop"].fade,
+div[class*="Backdrop"].fade {
+  opacity: 0 !important;
+  transition: opacity 0.15s linear !important;
+}
+
+/* Đảm bảo backdrop có opacity trong suốt khi show */
+.modal-backdrop.show,
+.modal-backdrop.fade.show,
+[class*="backdrop"].show,
+[class*="Backdrop"].show,
+div[class*="backdrop"].show,
+div[class*="Backdrop"].show {
+  opacity: 0.5 !important;
+}
+
+/* Đảm bảo modal không bị ẩn */
+.modal.show,
+[role="dialog"].show,
+div[class*="modal"].show,
+div[class*="Modal"].show {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Đảm bảo button trong modal có thể click - chỉ áp dụng cho modal dialog, không ảnh hưởng ZegoCloud UI */
+.modal button,
+[role="dialog"] button,
+div[class*="modal"]:not([id*="zego"]):not([class*="zego"]):not([id*="Zego"]):not([class*="Zego"]) button,
+div[class*="Modal"]:not([id*="zego"]):not([class*="zego"]):not([id*="Zego"]):not([class*="Zego"]) button {
+  pointer-events: auto !important;
+  z-index: 100000 !important;
+  position: relative !important;
+}
+
+/* Đảm bảo modal dialog content có thể tương tác */
+.modal-dialog,
+[class*="dialog-content"],
+[class*="Dialog-content"] {
+  pointer-events: auto !important;
+  z-index: 100001 !important;
+}
+
+/* Đảm bảo ZegoCloud không bị ảnh hưởng bởi các CSS override */
+#root,
+[id*="zego"],
+[id*="Zego"],
+[class*="zego"],
+[class*="Zego"],
+div[id*="zego"],
+div[id*="Zego"],
+div[class*="zego"],
+div[class*="Zego"] {
+  pointer-events: auto !important;
+}
+
+/* Đảm bảo ZegoCloud buttons không bị override - Tăng specificity cao hơn */
+#root button,
+#root [id*="zego"] button,
+#root [id*="Zego"] button,
+#root [class*="zego"] button,
+#root [class*="Zego"] button,
+#root div[id*="zego"] button,
+#root div[id*="Zego"] button,
+#root div[class*="zego"] button,
+#root div[class*="Zego"] button,
+[id*="zego"] button,
+[id*="Zego"] button,
+[class*="zego"] button,
+[class*="Zego"] button,
+div[id*="zego"] button,
+div[id*="Zego"] button,
+div[class*="zego"] button,
+div[class*="Zego"] button {
+  pointer-events: auto !important;
+  position: static !important;
+  z-index: unset !important;
+}
+
+/* Đảm bảo ZegoCloud container không bị overflow hidden */
+#root,
+[id*="zego"],
+[id*="Zego"] {
+  overflow: visible !important;
+}
+
+/* Đảm bảo ZegoCloud dialogs và modal confirmations hoạt động đúng */
+#root [role="dialog"],
+#root [role="alertdialog"],
+[id*="zego"] [role="dialog"],
+[id*="zego"] [role="alertdialog"],
+[class*="zego"] [role="dialog"],
+[class*="zego"] [role="alertdialog"],
+div[id*="zego"] [role="dialog"],
+div[id*="zego"] [role="alertdialog"],
+div[class*="zego"] [role="dialog"],
+div[class*="zego"] [role="alertdialog"] {
+  pointer-events: auto !important;
+  z-index: 99999 !important;
+  position: fixed !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Đảm bảo ZegoCloud backdrop không bị ẩn */
+#root [class*="backdrop"],
+#root [class*="Backdrop"],
+[id*="zego"] [class*="backdrop"],
+[id*="zego"] [class*="Backdrop"],
+[class*="zego"] [class*="backdrop"],
+[class*="zego"] [class*="Backdrop"],
+div[id*="zego"] [class*="backdrop"],
+div[id*="zego"] [class*="Backdrop"],
+div[class*="zego"] [class*="backdrop"],
+div[class*="zego"] [class*="Backdrop"] {
+  pointer-events: auto !important;
+  z-index: 99998 !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Đảm bảo tất cả elements con của ZegoCloud có thể tương tác */
+#root *,
+[id*="zego"] *,
+[id*="Zego"] *,
+[class*="zego"] *,
+[class*="Zego"] *,
+div[id*="zego"] *,
+div[id*="Zego"] *,
+div[class*="zego"] *,
+div[class*="Zego"] * {
+  pointer-events: auto !important;
+}

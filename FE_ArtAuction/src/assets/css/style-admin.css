@@ -1,0 +1,159 @@
+/*---------------------------------------------------------------------
+                               Management-user, artwork, report, invoice,
+-----------------------------------------------------------------------*/
+.table-responsive {
+  scrollbar-width: none;
+  height: 370px;
+}
+
+.img {
+  width: 80px;
+  height: 70px;
+}
+.table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f8f9fa;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+/*---------------------------------------------------------------------
+                               Setting-database
+-----------------------------------------------------------------------*/
+.backup {
+  width: 300px;
+}
+
+/*---------------------------------------------------------------------
+                               Submenu-admin
+-----------------------------------------------------------------------*/
+.submenu-admin-item:hover {
+  background-color: #f8f9fa;
+}
+
+.submenu-admin-item.active {
+  background-color: #e9deff !important;
+  border-left-color: #35058f;
+  font-weight: 600;
+}
+
+/*---------------------------------------------------------------------
+                               Auction room
+-----------------------------------------------------------------------*/
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.transition-base {
+  transition: all 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  background-color: #f8f9fa;
+}
+/*---------------------------------------------------------------------
+                               login
+-----------------------------------------------------------------------*/
+.bg-gradient-grey-blue {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+/*---------------------------------------------------------------------
+                               Add auction room
+-----------------------------------------------------------------------*/
+.icon-box {
+  width: 40px;
+  height: 40px;
+}
+.transition-base {
+  transition: all 0.2s ease-in-out;
+}
+
+/*---------------------------------------------------------------------
+                               Schedule
+-----------------------------------------------------------------------*/
+.cell-hover:hover {
+  background-color: #f8f9fa !important;
+}
+.cell-hover:hover .add-icon {
+  opacity: 1 !important;
+}
+.add-icon {
+  transition: opacity 0.2s;
+}
+.event-badge {
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+/*---------------------------------------------------------------------
+                               Statistical
+-----------------------------------------------------------------------*/
+
+/* Animation chuyển trang */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+/*---------------------------------------------------------------------
+hide-scrollbar of Auction roon and Schedule
+-----------------------------------------------------------------------*/
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/*---------------------------------------------------------------------
+Artwork Detail, Add User
+-----------------------------------------------------------------------*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: 50%, 50%;
+}
+
+/*---------------------------------------------------------------------
+Add admin
+-----------------------------------------------------------------------*/
+.x-small {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/*---------------------------------------------------------------------
+Animation
+-----------------------------------------------------------------------*/
+
+.animate-fade-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Định nghĩa chuyển động */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Dịch xuống 20px ban đầu */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Trở về vị trí cũ */
+  }
+}
+
+/*---------------------------------------------------------------------
+Artwork Detail
+-----------------------------------------------------------------------*/
+
+.hover-opacity-100:hover {
+  opacity: 1 !important;
+}
+.transition-base {
+  transition: all 0.2s ease;
+}
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.2s ease-in-out;
+}
